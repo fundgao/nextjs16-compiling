@@ -1,0 +1,65 @@
+@layer utilities {
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 93.75rem;
+    margin: 0 auto;
+
+    @supports (padding-left: clamp(3rem,
+        calc(3rem + 2rem * (100vw - 1024px) / 336px),
+        5rem)) {
+      padding-left: clamp(3rem,
+          calc(3rem + 2rem * (100vw - 1024px) / 336px),
+          5rem);
+      padding-right: clamp(3rem,
+          calc(3rem + 2rem * (100vw - 1024px) / 336px),
+          5rem);
+
+      @media (width < theme(--breakpoint-lg)) {
+        padding-left: clamp(1.5rem,
+            calc(1.5rem + 1.5rem * (100vw - 768px) / 256px),
+            3rem);
+        padding-right: clamp(1.5rem,
+            calc(1.5rem + 1.5rem * (100vw - 768px) / 256px),
+            3rem);
+      }
+
+      @media (width < theme(--breakpoint-md)) {
+        padding-left: clamp(1rem,
+            calc(1rem + 0.5rem * (100vw - 400px) / 368px),
+            1.5rem);
+        padding-right: clamp(1rem,
+            calc(1rem + 0.5rem * (100vw - 400px) / 368px),
+            1.5rem);
+      }
+    }
+
+    @supports not (padding-left: clamp(3rem,
+        calc(3rem + 2rem * (100vw - 1024px) / 336px),
+        5rem)) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+
+      @media (width < theme(--breakpoint-lg)) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      @media (width < theme(--breakpoint-md)) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+
+  .text-fluid-72 {
+    font-size: clamp(2.25rem, 3.38vw + 1.46rem, 4.5rem);
+    font-family: "montserrat-extra-bold", sans-serif;
+    font-weight: 800;
+
+    @supports not (font-size: clamp(2.25rem, 3.38vw + 1.46rem, 4.5rem)) {
+      font-size: 4.5rem;
+    }
+  }
+}

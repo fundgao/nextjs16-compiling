@@ -34,8 +34,7 @@ The terminal and browser are stuck during compilation.
 - Next.js Config:
   - output: N/A
 
+---
 
-
-
-I rewrote the 404 page not-found.tsx.
+I rewrote the 404 page not-found.tsx.  
 But it worked fine before upgrading to Next.js 16.

@@ -38,3 +38,6 @@ The terminal and browser are stuck during compilation.
 
 I rewrote the 404 page not-found.tsx.  
 But it worked fine before upgrading to Next.js 16.
+
+
+<img width="600" src="./public/nextjs16-compiling.png"/>
